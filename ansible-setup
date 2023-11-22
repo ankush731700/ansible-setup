@@ -1,0 +1,60 @@
+https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+
+then
+ls
+and yum install paste jo ls kar k aaya h usko
+
+yum update -y
+
+dependence pkg for ansible
+
+yum install python python-pip openssl ansible -y
+
+which ansible
+
+then:- go to ansible configretion file and add  this clint pc private ip
+vim /etc/ansible/hosts
+ex.1  [hr]
+      277.22.33.33
+     [sales]
+     222.2.2.2.2
+
+then go to scnd file
+vim /etc/ansible/ansible.cfg
+ #inventory   enbale file
+   #sudo-root   enable file
+
+then create user (same user all master server and clint server )
+
+useradd ankush
+passwd ankush
+
+then access the all permision this user
+go to
+  visudo
+
+then
+vim /etc/ssh/sshd_config
+
+enable file  parmitrootyes
+ and enable passwd authotication
+enable file #yes
+desable file no
+then
+systemctl enable sshd
+ ""      start sshd
+         restart sshd
+
+that its
+ all clint pc par create user and enable all access permision 
+clint ya host 
+useradd
+passwd
+visudo 
+user accesss 
+then 
+vim /etc/ssh/sshd_config
+enable sshd service
+start sshd
+restart sshd 
