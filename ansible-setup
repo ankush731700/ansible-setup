@@ -58,3 +58,14 @@ vim /etc/ssh/sshd_config
 enable sshd service
 start sshd
 restart sshd 
+
+go to ansible server and switch user 
+ssh-keygen
+cd .ssh
+ssh-copy-id username@privete ip           key ko copy kiya ansible server se clint pc pr 
+ssh username@privete ip       check this connectivty  clint pc 
+
+and run command adoc 
+ansible all -a "ls"
+ansible hr -ba "ls"
+
